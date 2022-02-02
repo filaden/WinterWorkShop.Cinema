@@ -38,6 +38,17 @@ namespace WinterWorkShop.Cinema.API.Controllers
 
            return result;
         }
+        [HttpGet("{GetProjectionsByMovieId}")]
+        public ActionResult<List<ProjectionResponse>> GetAllProjectionsByMovieId(int id)
+        {
+            var projections = _projectionRepository.GetAllProjectionsByMovieId( id);
+            var result = new List<ProjectionResponse>();
+            foreach(var projection in projections)
+            {
+                result.Add( new ProjectionResponse { Projection = projection.ProjectionId, CinemaPlace =projection.Cinema }); ;
+            }
+            return result;
+        }
 
     }
 }

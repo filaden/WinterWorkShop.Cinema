@@ -10,6 +10,7 @@ namespace WinterWorkShop.Cinema.Data.Models
     {
         public int ProjectionId { get; set; }
         public string Cinema { get; set; }
+        public int MovieId { get; set; }
 
     }
 }
