@@ -38,7 +38,7 @@ namespace WinterWorkShop.Cinema.API.Controllers
 
            return result;
         }
-        [HttpGet("{GetProjectionsByMovieId}")]
+        [HttpGet("movies/{movieId}")]
         public ActionResult<List<ProjectionResponse>> GetAllProjectionsByMovieId(int id)
         {
             var projections = _projectionRepository.GetAllProjectionsByMovieId( id);
