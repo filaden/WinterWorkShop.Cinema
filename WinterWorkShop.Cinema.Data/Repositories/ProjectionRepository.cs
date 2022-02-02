@@ -2,7 +2,7 @@
 
 namespace WinterWorkShop.Cinema.Data.Repositories
 {
-    public class ProjectionRepository : IProjectionRepository
+    public class ProjectionRepository : IProjectionRepository 
     {
         Database database = new Database();
 
@@ -14,6 +14,12 @@ namespace WinterWorkShop.Cinema.Data.Repositories
         {
             var projection = database.GetAllProjectionsResponses.FirstOrDefault(x => x.ProjectionId == id);
             return projection;
+        }
+        public List<ProjectionModel> GetAllProjectionsByMovieId(int id)
+        {
+
+            return database.GetAllProjectionsResponses.Where(x => x.MovieId == id).ToList();
+            
         }
     }
 }
