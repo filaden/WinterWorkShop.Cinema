@@ -11,8 +11,8 @@ namespace WinterWorkShop.Cinema.Data
         };
         public List<ProjectionModel> GetAllProjectionsResponses = new List<ProjectionModel>
         {
-            new ProjectionModel{ ProjectionId = 1 , Cinema = "Cineplex"},
-            new ProjectionModel{ ProjectionId = 2 , Cinema = "CinemaCinema",MovieId = 1}
+            new ProjectionModel{ ProjectionId = 1 , Cinema = "Cineplex" ,MovieId = 1},
+            new ProjectionModel{ ProjectionId = 2 , Cinema = "CinemaCinema",MovieId = 2}
 
         };
         
