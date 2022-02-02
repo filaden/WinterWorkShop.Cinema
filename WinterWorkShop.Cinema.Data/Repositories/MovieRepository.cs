@@ -15,7 +15,7 @@ namespace WinterWorkShop.Cinema.Data.Repositories
         {
             var movie = Database.GetAllMoviesResponses.FirstOrDefault(x => x.Id == id);
 
-            return movie;
+            return movie ;
         }
     }
 }
